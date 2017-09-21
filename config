@@ -1,0 +1,9 @@
+[config]
+delta_time2 = 0.000142857
+delta_time = 0.0005
+speed_A_main = 70
+speed_B_main = 60
+speed_C_main = 50
+speed_A_normal = 45
+speed_B_normal = 35
+speed_C_normal = 30
