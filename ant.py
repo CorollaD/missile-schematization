@@ -32,7 +32,7 @@ class Ant(pygame.sprite.Sprite):
         if self.wait:
             return
 
-        print(self.eta_left, self.arrived_pids)
+        # print(self.eta_left, self.arrived_pids)
         if self._arrived() and self.pid_next != self.arrived_pids[-1]:
             self.arrived_pids.append(self.pid_next)
 
@@ -58,7 +58,6 @@ class Ant(pygame.sprite.Sprite):
             pos = self.pos[0] * interp + (1 - interp) * pos_next[0], self.pos[1] * interp + (1 - interp) * pos_next[1]
             self.rect.center = utils.lb2lt(pos)
             self.eta_left -= 0.01
-            print(self.eta_left)
 
     def _speed(self):
         if g_graph.flags_main_road[self.pid_prev, self.pid_next]:

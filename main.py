@@ -21,9 +21,12 @@ colony = Colony()
 ants = pygame.sprite.Group()
 ants.add(colony.ants)
 
+global_time = 0.
 clock = pygame.time.Clock()
 while True:
     clock.tick(60)
+    global_time += 0.01
+    print('{:.4f}'.format(global_time))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT or (
